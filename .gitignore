@@ -1,0 +1,180 @@
+# ============================================================
+# 通用 .gitignore 模板
+# 用法：复制到项目根目录，按需删减
+# ============================================================
+
+# ---------- 操作系统 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ---------- 编辑器 / IDE ----------
+# VS Code：只忽略个人配置，保留可共享的 tasks.json / launch.json / extensions.json
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# JetBrains (IntelliJ / GoLand / PyCharm ...)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ---------- 密钥 / 凭证（务必忽略） ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+.aws/
+.ssh/
+*.secret
+secrets.yaml
+secrets.yml
+
+# ---------- 日志 / 临时文件 ----------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+.cache/
+tmp/
+
+# ---------- Node.js ----------
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.npm/
+.yarn/
+.pnp.*
+*.tsbuildinfo
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+
+# ---------- Go ----------
+# Go 一般不需要忽略编译产物（二进制名各异），按需添加
+*.exe
+*.exe~
+*.dll
+*.dylib
+*.test
+*.out
+vendor/          # 如果你不用 vendor 目录，删掉这行
+
+# ---------- Java / Kotlin ----------
+*.class
+*.jar
+*.war
+*.ear
+target/
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+*.hprof
+
+# ---------- Terraform ----------
+.terraform/
+.terraform.lock.hcl   # 视团队约定，有人选择提交
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ---------- Helm ----------
+# helm package 生成的 chart 包
+*.tgz
+# 本地渲染/调试产物
+charts/*.tgz
+rendered.yaml
+helmfile.lock
+
+# ---------- Kubernetes ----------
+kubeconfig
+*.kubeconfig
+.kube/
+
+# ---------- Docker ----------
+.docker/
+docker-compose.override.yml
+
+# ---------- 测试 / 覆盖率 ----------
+coverage/
+.coverage
+lcov.info
+junit.xml
+
+# ---------- 构建缓存 ----------
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
